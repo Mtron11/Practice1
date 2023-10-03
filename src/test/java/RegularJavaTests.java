@@ -7,7 +7,7 @@ public class RegularJavaTests {
 
     @Test
     public void testCorrectIP1(){
-        String ip = "170.0.0.1";
+        String ip = "56.0.0.1";
         Assert.assertEquals(true, RJ.correctIP(ip));
     }
 
