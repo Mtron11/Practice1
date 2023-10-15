@@ -14,7 +14,8 @@ public class RegularJava {
         return Pattern.matches(patternGuid, guid);
     }
 
-    private static String patternURL = "^(https?:\\/\\/)?(?!www\\.)([\\da-z\\.]{2,})\\.([a-z\\.]{2,6})([\\/\\w\\S \\.-]*)*\\/?$";
+    private static String patternURL = "^(https?://)?(www\\.)?((?!www\\.)[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]\\.)+([a-zA-Z]{2,}){1}" +
+            "(:\\d+)?(/[\\w\\.\\-]*)*(\\?\\w+=[\\w\\+-\\.]+(\\&\\w+=[\\w\\+-\\.]+)*)?(#[\\w\\-]+)?$";
     public boolean correctURL(String url){
         return Pattern.matches(patternURL, url);
     }
